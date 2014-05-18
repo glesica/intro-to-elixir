@@ -279,6 +279,16 @@ iex(6)> get_elem greeting, 1
 
 **Note**: notice that tuples are immutable.
 
+# Elixir syntax - pipes
+
+Elixir allows function chaining similar to Unix pipes. This is a very powerful
+technique we'll look at more later.
+
+~~~elixir
+iex(18)> " hello there" |> String.strip |> String.split(" ")                                  
+["hello", "there"]
+~~~
+
 # Elixir syntax - functions
 
 First, the identity function, it just returns its argument, unaltered.
