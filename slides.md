@@ -56,6 +56,14 @@
   * Variables don't vary
   * Lots of recursion
 
+# Function programming: why would I want that?
+
+Immutability makes code more predictable, easier to reason about and understand.
+
+  > Is there a way I can have browser dev tools breakpoint every time a variable
+  > changes value? It'd be like console.breakOnChange(this.context)
+  > Source: https://twitter.com/pamelafox/status/472416563950153728
+
 # Example: loop
 
   * Classic operation
