@@ -2,7 +2,26 @@
 % George Lesica
 % June 2014
 
+# About these notes
+
+All the headings after this one refer directly to slides in my presentation of
+the same title. These notes are for my own benefit during the talk, but also for
+the benefit of anyone who would like the understand the slides a little better
+after-the-fact. I hate when people dump cryptic slides online as though they are
+useful to anyone, so I try not to do that.
+
 # About me
+
+I'm George! I'm a graduate student in computer science at the University of
+Montana and a software developer. I have an interest in distributed systems and
+I've been casually interested in Erlang and Elixir for several years now. I am
+also a bit of a functional programming fanboy, so the whole thing is a pretty
+natural fit.
+
+I have a random academic background. I have a BA in political
+science that I followed up with an MA in economics. Then I worked for awhile
+before deciding that I couldn't live without an MS in computer science (I had
+most of a BS in math/CS already).
 
 # Disclaimer
 
@@ -15,6 +34,23 @@ comments are always welcome!
 
 # About the talk
 
+This talk is going to be a pretty standard language talk for the most part. The
+one exception to this pattern is that I am going to spend a decent amount of
+time talking about why you would ever want to use Elixir. The reason for this is
+twofold. First, Elixir runs on the same virtual machine as Erlang, which means
+that it comes along with quite a bit of (as it turns out, good, very useful)
+baggage, which many people are understandably apprehensive about, and isn't
+entirely trivial to get up and going.
+
+Second, Elixir is a functional programming language. Virtually all of us started
+out lives as programmers with imperative programming languages and these
+generally map nicely into easy metaphors about programming in general: you're
+just giving the computer a series of instructions, just like you might to a
+child or coworker. The problem (and we'll discuss a bit more in a minute) with
+this is that imperative instructions don't scale very well. For instance, give
+someone instructions for how to make an omelette, pretty simple. Now give two
+people instructions to make one omelette (in a way that lets them do better than
+one of them working alone), quite a bit harder!
 
 # A brief history of Erlang
 
@@ -56,6 +92,22 @@ A common complaint about Erlang is that its syntax is confusing and difficult to
 learn. While this is obviously a matter of personal style preference, it is true
 that the syntax is unusual. Elixir will feel more familiar to most people,
 especially those coming from languages like Python and Ruby.
+
+# Example - iterator loop
+
+There are a couple things going on here that could cause problems. First, if the
+code wasn't so short, it would be relatively easy for someone to get confused
+and try to mutate `outlist` as we're appending to it. Another potential problem
+is that it could be returned early, the name says it all...  **out**list. It's
+the list we're going to send **out** of the function. If it isn't complete, then
+why does it exist?
+
+The solution to this is almost trivially obvious, right? Just make this process
+atomic by encapsulating it in a function, class, library, whatever. That way no
+one can screw around with it before we're finished doing what we need to do, and
+no one can change the code based on an invalid assumption (like returning
+`outlist` before it has been fully built). Sounds great, right? Congratulations,
+you just invented the map function!
 
 # Elixir syntax - anonymous functions
 
