@@ -98,7 +98,7 @@ especially those coming from languages like Python and Ruby.
 There are a couple things going on here that could cause problems. First, if the
 code wasn't so short, it would be relatively easy for someone to get confused
 and try to mutate `outlist` as we're appending to it. Another potential problem
-is that it could be returned early, the name says it all...  **out**list. It's
+is that it could be returned early, the name says it all...  **out** -list. It's
 the list we're going to send **out** of the function. If it isn't complete, then
 why does it exist?
 
