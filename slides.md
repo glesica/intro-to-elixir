@@ -24,6 +24,12 @@
   * Elixir syntax and style
   * Demo code
 
+# Demo app - tcpchat
+
+Code: https://github.com/glesica/tcpchat
+
+Demo: `telnet 107.170.185.125 3000`
+
 # A brief history of Erlang
 
   * Developed at Ericsson in 1986
