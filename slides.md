@@ -326,6 +326,24 @@ defmodule Identity do
 end
 ~~~
 
+# Elixir syntax - module attributes
+
+These can be (and are) used for documentation or as constants.
+
+~~~elixir
+defmodule Maths do
+  @moduledoc """
+  Some awesome math functions!
+  """
+
+  @pi 3.1415
+
+  def circle_area(radius)
+    radius * radius * @pi
+  end
+end
+~~~
+
 # Elixir references
 
   * <http://elixir-lang.org> - language web site, including downloads and an
