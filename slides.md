@@ -344,6 +344,62 @@ defmodule Maths do
 end
 ~~~
 
+# Elixir syntax - maps
+
+Maps are associative arrays that map keys on to values. We can also pattern
+match on them to pull out specific values.
+
+~~~elixir
+iex(1)> m = %{name: "George", disposition: "Grumpy"}
+%{disposition: "Grumpy", name: "George"}
+iex(2)> m[:name]
+"George"
+iex(3)> d = %{1 => 2, 2 => 4, 3 => 6}
+%{1 => 2, 2 => 4, 3 => 6}
+iex(4)> d[1]
+2
+iex(5)> r = %{:name => "George", "lastname" => "Lesica"}
+%{:name => "George", "lastname" => "Lesica"}
+iex(6)> r["lastname"]
+"Lesica"
+iex(7)> r[:name]
+"George"
+iex(8)> %{name: name} = r
+%{:name => "George", "lastname" => "Lesica"}
+iex(9)> name
+"George"
+~~~
+
+# Elixir syntax - comprehensions
+
+~~~elixir
+iex(1)> for n <- [1, 2, 3, 4], do: n * n
+[1, 4, 9, 16]
+iex(2)> for n <- 1..4, do: n * n
+[1, 4, 9, 16]
+iex(3)> require Integer
+nil
+iex(4)> for n <- 1..4, Integer.odd?(n), do: n * n
+[1, 9]
+~~~
+
+**Note**: We had to `require Integer` because `odd` is a macro.
+
+# Elixir syntax - other stuff
+
+  * structs - maps with default values and compile-time checking
+  * protocols - polymorphism (basically interfaces)
+  * cond, unless
+  * error handling
+
+# Sample code!
+
+Take a look at the demo project. Note that this isn't necessarily a good way to
+do what I've done, but it is simple and illustrates Elixir/Erlang concepts
+reasonably well.
+
+  * <https://github.com/glesica/tcpchat>
+
 # Elixir references
 
   * <http://elixir-lang.org> - language web site, including downloads and an
