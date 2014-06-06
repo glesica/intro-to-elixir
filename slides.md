@@ -26,7 +26,7 @@
 
 # Demo app - tcpchat
 
-Code: https://github.com/glesica/tcpchat
+Code: <https://github.com/glesica/tcpchat>
 
 Demo: `telnet 107.170.185.125 3000`
 
@@ -69,7 +69,7 @@ Immutability makes code more predictable, easier to reason about and understand.
   > Is there a way I can have browser dev tools breakpoint every time a variable
   > changes value? It'd be like console.breakOnChange(this.context)
   >
-  > Source: https://twitter.com/pamelafox/status/472416563950153728
+  > Source: <https://twitter.com/pamelafox/status/472416563950153728>
 
 # Example: loop
 
