@@ -72,6 +72,7 @@ Demo: `telnet 107.170.185.125 4000`
   * Everything is a function
     * Inputs map to outputs
     * Given inputs guarantee the same outputs
+    * Emphasis on pure functions - no side effects
   * Variables don't vary (immutability)
   * Lots of recursion
 
