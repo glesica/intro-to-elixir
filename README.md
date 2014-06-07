@@ -10,8 +10,15 @@ advantage of the code samples, etc.
 
   * Pandoc (>=1.12.2.1) - to build the slides
   * Elixir (>=0.13.2) - to run the example code
-  * Ansible (>=1.5.4) - to use the setup playbook
 
 ## Building the materials
 
 To build everything, just run `make`.
+
+## Getting Elixir
+
+  1) Install Erlang:
+  <https://www.erlang-solutions.com/downloads/download-erlang-otp>
+  2) Install Elixir:
+    * Linux: <https://www.erlang-solutions.com/downloads/download-elixir>
+    * Others: <http://elixir-lang.org/getting_started/1.html>
