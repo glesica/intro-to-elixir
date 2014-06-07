@@ -86,6 +86,30 @@ Many of the strengths that Erlang inherited from its telecommunications industry
 roots make it perfect for modern Internet development. Mobile back-ends, chat
 systems, and web applications are all good candidates for Erlang implementation.
 
+# How Erlang does soft real-time
+
+http://jlouisramblings.blogspot.com/2013/01/how-erlang-does-scheduling.html
+
+"When you call spawn(fun worker/0) a new process is constructed, by allocating
+its process control block in userland. This usually amounts to some 600+ bytes
+and it varies from 32 to 64 bit architectures. Runnable processes are placed in
+the run-queue of a scheduler and will thus be run later when they get a
+time-slice."
+
+"Every once in a while, processes are migrated between schedulers according to a
+quite intricate process. The aim of the heuristic is to balance load over
+multiple schedulers so all cores get utilized fully. But the algorithm also
+considers if there is enough work to warrant starting up new schedulers. If not,
+it is better to keep the scheduler turned off as this means the thread has
+nothing to do. And in turn this means the core can enter power save mode and get
+turned off. Yes, Erlang conserves power if possible."
+
+"Both processes and ports have a "reduction budget" of 2000 reductions. Any
+operation in the system costs reductions. This includes function calls in loops,
+calling built-in-functions (BIFs), garbage collecting heaps of that process[n1],
+storing/reading from ETS, sending messages (The size of the recipients mailbox
+counts, large mailboxes are more expensive to send to)."
+
 # Elixir: Erlang's hip younger sibling
 
 A common complaint about Erlang is that its syntax is confusing and difficult to
