@@ -277,9 +277,7 @@ iex(4)> length a
 3
 iex(5)> hd a
 1
-iex(6)> tl b
-[5, 6]
-iex(7)> hd []
+iex(6)> hd []
 ** (ArgumentError) argument error
     :erlang.hd([])
 ~~~
