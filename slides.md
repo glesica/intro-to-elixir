@@ -65,6 +65,22 @@ Demo: `telnet 107.170.185.125 4000`
     preempted.
   * Node.js attempts to do this but it doesn't work if you do any computation
 
+# Actor model
+
+Erlang uses the actor model for concurrency:
+<https://en.wikipedia.org/wiki/Actor_model>
+
+  * Processes are actors
+  * Each process has a mailbox (queue)
+  * Messages are sent using PIDs
+    * Sending a message costs reductions
+    * Messages sent asynchronously
+  * Eliminates (largely) the need for callbacks
+    * Common pattern: `send(pid, {:message, self()})`
+    * Receiver replies to variable bound to `self()`
+
+More on this when we look at the demo application!
+
 # Elixir: Erlang's hip younger sibling
 
   * Friendlier syntax (similar to Ruby)
