@@ -42,8 +42,9 @@ Demo: `telnet 107.170.185.125 4000`
   * Growing popularity
     * Amazon
     * Call of Duty
-    * Goldman Sachs
     * GitHub
+    * Goldman Sachs
+    * Heroku
     * WhatsApp
 
 # Erlang, what is it good for?
@@ -52,7 +53,7 @@ Demo: `telnet 107.170.185.125 4000`
   * Fault-tolerance
   * Soft real-time
 
-# How Erlang does soft real-time
+# How Erlang does concurrency
 
   * Scheduler per thread
   * BEAM processes are super lightweight (less than 1K)
@@ -93,7 +94,7 @@ More on this when we look at the demo application!
     * Inputs map to outputs
     * Given inputs guarantee the same outputs
     * Emphasis on pure functions - no side effects
-  * Variables don't vary (immutability)
+  * Variables can't be reassigned (immutability)
   * Lots of recursion
 
 # Immutability: why would I want that?
@@ -214,7 +215,7 @@ iex(4)> :atom
 
 We have a fairly simple type system in Elixir:
 
-  * `:atom` - atoms, like Ruby, singletons
+  * `:atom` - atoms, like Ruby symbols, memory efficient
   * `"hello world"` - binary strings
   * `'hello world'` - character lists (for Erlang inter-op)
   * `73` - integers

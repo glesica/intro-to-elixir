@@ -86,7 +86,7 @@ Many of the strengths that Erlang inherited from its telecommunications industry
 roots make it perfect for modern Internet development. Mobile back-ends, chat
 systems, and web applications are all good candidates for Erlang implementation.
 
-# How Erlang does soft real-time
+# How Erlang does concurrency
 
 http://jlouisramblings.blogspot.com/2013/01/how-erlang-does-scheduling.html
 
