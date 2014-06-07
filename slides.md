@@ -176,6 +176,18 @@ iex(4)> :atom
 :atom
 ~~~
 
+# Elixir syntax - types
+
+We have a fairly simple type system in Elixir:
+
+  * `:atom` - atoms, like Ruby, singletons
+  * `"hello world"` - binary strings
+  * `'hello world'` - character lists (for Erlang inter-op)
+  * `73` - integers
+  * `3.14` - floats
+
+There are some other, more specialized types as well.
+
 # Elixir syntax - pattern matching
 
 Pattern matching can look like assignment, but it really isn't and it is used in
