@@ -28,7 +28,7 @@
 
 Code: <https://github.com/glesica/tcpchat>
 
-Demo: `telnet 107.170.185.125 3000`
+Demo: `telnet 107.170.185.125 4000`
 
 # A brief history of Erlang
 
