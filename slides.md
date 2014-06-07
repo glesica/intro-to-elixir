@@ -358,8 +358,8 @@ end
 
 # Elixir syntax - maps
 
-Maps are associative arrays that map keys on to values. We can also pattern
-match on them to pull out specific values.
+Maps are associative arrays that map keys on to values. If the keys are atoms
+(which is a good idea) we can use a very concise syntax.
 
 ~~~elixir
 iex(1)> m = %{name: "George", disposition: "Grumpy"}
@@ -370,6 +370,12 @@ iex(3)> d = %{1 => 2, 2 => 4, 3 => 6}
 %{1 => 2, 2 => 4, 3 => 6}
 iex(4)> d[1]
 2
+
+# Elixir syntax - maps (cont'd)
+
+We can have mixed type keys, but we use the fat arrow syntax in that case. We
+can also pattern match on them to pull out specific values.
+
 iex(5)> r = %{:name => "George", "lastname" => "Lesica"}
 %{:name => "George", "lastname" => "Lesica"}
 iex(6)> r["lastname"]
