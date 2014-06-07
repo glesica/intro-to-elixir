@@ -19,6 +19,10 @@
 
 # About the talk
 
+I'm going to try to cover a lot of ground. This is just an intro, there won't be
+a ton of depth. The goal is to show you enough that you can play around with it
+and decide if you want to use it.
+
   * The Erlang ecosystem
   * Functional programming
   * Elixir syntax and style
