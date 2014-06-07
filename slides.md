@@ -48,6 +48,19 @@ Demo: `telnet 107.170.185.125 4000`
   * Fault-tolerance
   * Soft real-time
 
+# How Erlang does soft real-time
+
+  * Scheduler per thread
+  * BEAM processes are super lightweight (less than 1K)
+  * Schedulers can preempt BEAM processes
+    * Process gets 2000 "reductions"
+    * Everything (basically) costs reductions
+    * Sending messages to full mailboxes is more expensive
+  * Example: 100 things to do, first one will take 50 ms, the rest will be fast,
+    in other languages job 2 would take at least 50 ms, in Erlang job 1 gets
+    preempted.
+  * Node.js attempts to do this but it doesn't work if you do any computation
+
 # Elixir: Erlang's hip younger sibling
 
   * Friendlier syntax (similar to Ruby)
