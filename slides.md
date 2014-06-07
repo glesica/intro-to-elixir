@@ -284,8 +284,7 @@ iex(6)> hd []
 
 # Elixir syntax - tuples
 
-Tuples are basically just like tuples in Python, but you can pattern match on
-them (woo!).
+Tuples are similar to Python but with pattern matching (woo!).
 
 ~~~elixir
 ex(1)> greeting = {:hello, "Hi there, friend!"}
