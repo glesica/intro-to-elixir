@@ -439,3 +439,10 @@ reasonably well.
     excellent tutorial
   * <http://elixirsips.com/> - short tutorial videos demonstrating key features
     of Elixir and various Erlang libraries it can use
+
+# Thank you!
+
+Questions or comments, contact me!
+
+  * george@lesica.com
+  * @glesica
