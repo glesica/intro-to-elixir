@@ -17,8 +17,8 @@ To build everything, just run `make`.
 
 ## Getting Elixir
 
-  1) Install Erlang:
+  1. Install Erlang:
   <https://www.erlang-solutions.com/downloads/download-erlang-otp>
-  2) Install Elixir:
+  2. Install Elixir:
     * Linux: <https://www.erlang-solutions.com/downloads/download-elixir>
     * Others: <http://elixir-lang.org/getting_started/1.html>
